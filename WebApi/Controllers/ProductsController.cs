@@ -13,6 +13,7 @@ namespace WebApi.Controllers
     [Authorize]
     public class ProductsController : ControllerBase
     {
+
         private readonly IRepository<Product> _repo;
         private readonly IUnitOfWork _unit;
 
