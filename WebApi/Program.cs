@@ -10,6 +10,18 @@ using WebApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular", policy =>
+    {
+        policy
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials()
+            .SetIsOriginAllowed(origin => true);
+    });
+});
+
 Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
     .Enrich.WithThreadId()
@@ -84,6 +96,7 @@ builder.Services
 
 var app = builder.Build();
 
+app.UseCors("AllowAngular");
 app.UseMiddleware<ExceptionMiddleware>();
 
 // middlewares
