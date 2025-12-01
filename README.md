@@ -196,4 +196,16 @@ EF Core
 
 Serilog
 
-Lista para evaluación, pruebas, entrevistas o integración con frontend.
+ClientApp/
+├── app/
+│   ├── app.component.ts
+│   ├── app.routes.ts
+│   ├── services/
+│   ├── interceptors/
+│   └── pages/
+│        ├── login/
+│        ├── dashboard/
+│        ├── products/
+│        ├── sales/
+│        └── sales-report/
+ 
