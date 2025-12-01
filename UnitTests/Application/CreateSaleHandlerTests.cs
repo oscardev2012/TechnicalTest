@@ -30,7 +30,7 @@ namespace UnitTests.Application
                 new SaleItemDto
                 {
                     ProductId = 1,
-                    Quantity = 5 // más que stock
+                    Quantity = 5 
                 }
             }
             };

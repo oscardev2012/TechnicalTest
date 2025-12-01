@@ -24,8 +24,6 @@ namespace Infrastructure.Persistence
 
             var total = await query.CountAsync();
 
-            // Orden genérico: por Id si existe, si no, sin orden especial
-            // Para algo rápido de prueba técnica, esto está OK
             query = query.OrderBy(e => EF.Property<object>(e, "Id"));
 
             var items = await query
