@@ -1,8 +1,11 @@
 <Solution>
-  <Folder Name="/ClienteAngular/" />
+  <Folder Name="/ClienteAngular/">
+    <File Path="clienteangular.zip" />
+  </Folder>
   <Folder Name="/Elementos de la solución/">
     <File Path="README.md" />
   </Folder>
+
   <Folder Name="/tests/">
     <Project Path="UnitTests/UnitTests.csproj" />
   </Folder>
